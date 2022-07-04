@@ -1,0 +1,11 @@
+ramps firmware:
+REVISAR LOS PINES DE RX Y TX PARA SERIAL 1, NO DEJAR CONECTADO LOS SENSORES Z_MAX Y Z_MIN
+
+configuration.h:
+#define SERIAL_PORT 1 // Usa los pines de Z_MAX_PIN y Z_MIN_PIN para rx y tx
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER // deshabilitar los demas, recordar añadir la libreria U8glib antes de compilar.
+
+pins_RAMPS_14.h:
+Z_MIN_PIN : 18 -> 15
+Z_MAX_PIN : 19 -> -1 // No asignado
+Y_MAX_PIN : 15 -> -1 // No asignado
